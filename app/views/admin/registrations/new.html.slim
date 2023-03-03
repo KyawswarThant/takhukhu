@@ -1,0 +1,16 @@
+.create
+  h1.text-center.mb-3 Sign Up
+  = form_with model: @form, url: admin_registration_path, local: true, method: :post do |f|
+    .login-form
+      .mt-2
+        = f.label :email
+        = f.text_field :email, class: "form-control mt-2"
+      .mt-2
+        = f.label :password
+        = f.password_field :password, class: "form-control mt-2"
+      .mt-2
+        = f.label :password
+        = f.password_field :password_confirmation, class: "form-control mt-2"
+      = f.object.errors.to_s
+      .text-center.mt-2
+        = f.submit :Signup, class: "btn btn-primary"

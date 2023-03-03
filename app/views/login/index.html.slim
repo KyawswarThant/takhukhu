@@ -1,0 +1,12 @@
+.login
+  h1.text-center.mb-3 Login
+  = form_with url: user_session_path, local: true do |f|
+    .login-form
+      .mt-2
+        = f.label :email
+        = f.text_field :email, class: "form-control mt-2"
+      .mt-2
+        = f.label :password
+        = f.password_field :password, class: "form-control mt-2"
+      .text-center.mt-2
+        = f.submit :Login, class: "btn btn-primary"

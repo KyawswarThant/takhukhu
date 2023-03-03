@@ -1,0 +1,16 @@
+.login
+  h1.text-center.mb-3 Login
+  = form_with model: User, url: user_session_path, local: true, method: :post do |f|
+    .login-form
+      .mt-2
+        = f.label :email
+        = f.text_field :email, class: "form-control mt-2"
+      .mt-2
+        = f.label :password
+        = f.password_field :password, class: "form-control mt-2"
+      .text-center.mt-2
+        = f.submit :Login, class: "btn btn-primary"
+  .text-center
+    span
+      | do not have a account?
+      = link_to "create", new_user_registration_path
