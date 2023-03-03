@@ -1,10 +1,6 @@
-# README
+# Takhukhu
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-<span style="background-color:green">test</span>
-
-Things you may want to cover:
+Rails User and Admin basic authentication with devise
 
 * Ruby version
     ````
