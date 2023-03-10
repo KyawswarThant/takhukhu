@@ -1,0 +1,4 @@
+- if f.object.errors.has_key?(column)
+  - f.object.errors.to_hash(true)[column].each do |msg|
+    label.text-danger
+      = msg

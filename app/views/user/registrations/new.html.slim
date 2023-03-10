@@ -4,13 +4,16 @@
     .login-form
       .mt-2
         = f.label :email
-        = f.text_field :email, class: "form-control mt-2"
+        = f.email_field :email, class: "form-control mt-2"
+        = render "shared/error", f: f, column: :email
       .mt-2
         = f.label :password
         = f.password_field :password, class: "form-control mt-2"
+        = render "shared/error", f: f, column: :password
       .mt-2
         = f.label :password
         = f.password_field :password_confirmation, class: "form-control mt-2"
-      = f.object.errors.to_s
+        = render "shared/error", f: f, column: :password_confirmation
+        = render "shared/error", f: f, column: :passwords
       .text-center.mt-2
         = f.submit :Signup, class: "btn btn-primary"
