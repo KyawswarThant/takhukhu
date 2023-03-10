@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     get "user/signup", to: "user/registrations#new", as: :new_user_registration
     post "user/signup", to: "user/registrations#create", as: :user_registration
   end
-  get "user", to: "users#index"
+  get "user", to: "user/top#index"
 
   devise_scope :admin do
     get "admin/login", to: "admin/sessions#new", as: :new_admin_session
